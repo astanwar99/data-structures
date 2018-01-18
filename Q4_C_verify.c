@@ -29,7 +29,7 @@ void main()
     int i,j;
     char expression[50]="";
     char ch;
-    char c;
+    char c='';
   /*po->parenthesis opening counter
     pc->parenthesis closing counter
     fo->flower opening counter
