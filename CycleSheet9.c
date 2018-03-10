@@ -1,3 +1,18 @@
+/*
+Ashwani Singh Tanwar
+17BIT0231
+Created On : 10-03-2018
+
+9. Details such as Register number, name, quiz-3 marks of those students who wrote for
+SET-question paper and of those who wrote for SET-B question paper are maintained in
+sorted order in two separate lists L1 and L2. Write a program to merge the two lists
+in sorted order so as to facilitate mark entry in faculty login.
+
+Low Level: Merging list 2 at the end of list 1                          [6 marks]
+Middle Level: Implement the above problem		                        [2 marks]
+High Level: Enhance the above problem for unsorted lists	            [2 marks]
+*/
+
 #include<stdio.h>
 #include<string.h>
 struct node
@@ -94,8 +109,10 @@ void display(struct node *p)
 
 struct node* total_merge(struct node *head1, struct node *head2)
 {
-    struct node *resultHead, *resultTail, *temp;
+    struct node *resultHead, *resultTail, *temp,*LLOne,*LLTwo;
     resultHead = resultTail = NULL;
+    LLOne = head1;
+    LLTwo = head2;
     while(1)
     {
         if(LLOne == NULL)
@@ -112,7 +129,7 @@ struct node* total_merge(struct node *head1, struct node *head2)
 
         /* Check whether current node of
         which Linked list is smaller*/
-        if(LLOne->data <= LLTwo->data)
+        if(LLOne->marks <= LLTwo->marks)
         {
             temp = LLOne;
             LLOne = LLOne->next;
