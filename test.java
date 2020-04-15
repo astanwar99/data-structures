@@ -1,8 +1,12 @@
-import trees.node.*;
+import trees.binarySearchTree.*;
 
 class test{
     public static void main(String[] args) {
-        Node t = new Node(5);
-        System.out.println(t.key);
+        BinarySearchTree bt = new BinarySearchTree();
+        bt.setNode(10);
+        bt.push(5);
+        bt.push(21);
+
+        bt.inOrder();
     }
 }
