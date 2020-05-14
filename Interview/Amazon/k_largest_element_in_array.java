@@ -1,7 +1,10 @@
+import java.util.*;
+
 class Test{
 
-    void sol1_bubble_sort(int[] arr, int k){
+    void sol1_bubble_sort(int[] ar, int k){
         System.out.println("Modified bubble sort soln - O(n*k)");
+        int[] arr = ar.clone();
         int n = arr.length;
         int temp = 0;
         for(int i = 0; i < k; ++i) {
@@ -19,8 +22,9 @@ class Test{
         System.out.println();
     }
 
-    void sol2_temp_array(int[] arr, int k){
+    void sol2_temp_array(int[] ar, int k){
         System.out.println("Temporary array soln - O((n - k)*k)");
+        int[] arr = ar.clone();
         int n = arr.length;
         int[] temp = new int[k];
         int temp_min_index = 0;
@@ -30,9 +34,9 @@ class Test{
         }
 
         for (int i = 0; i < n; i++) {
-
-            for (int j = 0; j < temp.length; j++) {
-                if(min < temp[j]){
+            min = Integer.MAX_VALUE;
+            for (int j = 0; j < k; j++) {
+                if(min > temp[j]){
                     min = temp[j];
                     temp_min_index = j;
                 }
@@ -43,9 +47,21 @@ class Test{
             }
         }
 
+        for (int i = 0; i < k; i++) {
+            System.out.print(temp[i] + " ");            
+        }
+        System.out.println();
+    }
+
+    void sol3_sorting(int[] ar, int k) {
+        System.out.println("Normal sorting soln - O(nlogn)");
+        int[] arr = ar.clone();
+        int n = arr.length;
+        Arrays.sort(arr);
         for (int i = n - 1; i > n - k - 1 ; i--) {
             System.out.print(arr[i] + " ");            
         }
+        System.out.println();
     }
 
     public static void main(String[] args) {
@@ -55,5 +71,6 @@ class Test{
 
         t.sol1_bubble_sort(arr, k);
         t.sol2_temp_array(arr, k);
+        t.sol3_sorting(arr, k);
     }
 }
