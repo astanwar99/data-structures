@@ -33,7 +33,7 @@ class Test{
             temp[i] = arr[i];
         }
 
-        for (int i = 0; i < n; i++) {
+        for (int i = k; i < n; i++) {
             min = Integer.MAX_VALUE;
             for (int j = 0; j < k; j++) {
                 if(min > temp[j]){
@@ -77,6 +77,26 @@ class Test{
         System.out.println();
     }
 
+    void sol5_temp_minHeap(int[] ar, int k){
+        System.out.println("Temp min heap - O(k + (n - k)logk)");
+        PriorityQueue<Integer> tempMinHeap = new PriorityQueue<>();
+        for (int i = 0; i < k; i++) {
+            tempMinHeap.add(ar[i]);
+        }
+        for (int i = k; i < ar.length; i++) {
+            int root = tempMinHeap.peek();
+            if(root < ar[i]){
+                tempMinHeap.remove(root);
+                tempMinHeap.add(ar[i]);
+            }
+        }
+        Iterator<Integer> it = tempMinHeap.iterator();
+        while(it.hasNext()) {
+            System.out.print(it.next() + " ");
+        }
+        System.out.println();
+    }
+
     public static void main(String[] args) {
         int[] arr = {1, 23, 12, 9, 30, 2, 50};
         int k = 3;
@@ -86,5 +106,6 @@ class Test{
         t.sol2_temp_array(arr, k);
         t.sol3_sorting(arr, k);
         t.sol4_max_heaps(arr, k);
+        t.sol5_temp_minHeap(arr, k);
     }
 }
