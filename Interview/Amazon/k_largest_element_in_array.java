@@ -64,6 +64,19 @@ class Test{
         System.out.println();
     }
 
+    void sol4_max_heaps(int[] ar, int k) {
+        System.out.println("Using Max Heap - O(n + klogn)");
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Comparator.reverseOrder());
+        Integer[] arr = Arrays.stream(ar).boxed().toArray(Integer[]::new);
+        maxHeap.addAll(Arrays.asList(arr));
+        
+        Iterator<Integer> it = maxHeap.iterator();
+        while(k-- > 0 && it.hasNext()) {
+            System.out.print(it.next() + " ");
+        }
+        System.out.println();
+    }
+
     public static void main(String[] args) {
         int[] arr = {1, 23, 12, 9, 30, 2, 50};
         int k = 3;
@@ -72,5 +85,6 @@ class Test{
         t.sol1_bubble_sort(arr, k);
         t.sol2_temp_array(arr, k);
         t.sol3_sorting(arr, k);
+        t.sol4_max_heaps(arr, k);
     }
 }
