@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Test{
+class pythagorean_triplet_in_array{
     boolean sol1_brute_method(int[] arr){
         int[] ar = arr.clone();
         int a, b, c;
@@ -71,15 +71,15 @@ class Test{
         for(int i = 1; i < max + 1; i++) {
             if(hmap.get(i) == null)
                 continue;
-            
+
             for(int j = 1; j < max + 1; j++) {
-                if(hmap.get(j) == null || (hmap.get(i) == hmap.get(j) && hmap.get(i) < 2)){
+                if((i == j && hmap.get(i) < 2) || hmap.get(j) == null){
                     continue;
                 }
-
+                
                 // Find c 
                 int val = (int) Math.sqrt(i * i + j * j); 
-    
+                
                 // If c^2 is not a perfect square 
                 if ((val * val) != (i * i + j * j)) 
                     continue; 
@@ -88,8 +88,10 @@ class Test{
                 if (val > max) 
                     continue; 
                 
-                if(hmap.get(val) == 1)
+                if(hmap.get(val) == 1){
+                    System.out.println("Triplet found: " + i + ", " + j + ", " + val);
                     return true;
+                }
 
             }
         }
@@ -98,9 +100,9 @@ class Test{
 
     public static void main(String[] args) {
         int arr[] = { 3, 1, 4, 6, 5 };
-        Test t = new Test();
+        pythagorean_triplet_in_array t = new pythagorean_triplet_in_array();
         t.sol1_brute_method(arr);
         t.sol2_sorting(arr);
-        System.out.println(t.sol3_hashing(arr));
+        t.sol3_hashing(arr);
     }
 }
