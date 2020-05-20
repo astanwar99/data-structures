@@ -12,7 +12,7 @@ class pythagorean_triplet_in_array{
                     c = k * k;
 
                     if(a == b + c || b == a + c || c == a + b){
-                        System.out.println("Triplet found: " + a + ", " + b + ", " + c);
+                        System.out.println("Triplet found: " + Math.sqrt(a) + ", " + Math.sqrt(b) + ", " + Math.sqrt(c));
                         return true;
                     }
                 }
@@ -41,7 +41,7 @@ class pythagorean_triplet_in_array{
                 a = ar[f];
                 b = ar[l];
                 if(a + b == c){
-                    System.out.println("Triplet found: " + a + ", " + b + ", " + c);
+                    System.out.println("Triplet found: " + Math.sqrt(a) + ", " + Math.sqrt(b) + ", " + Math.sqrt(c));
                     return true;
                 }
                 else if(a + b < c){
