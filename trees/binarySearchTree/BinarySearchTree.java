@@ -53,6 +53,10 @@ public class BinarySearchTree{
         System.out.println();
     }
 
+    public int depth() {
+        return maxDepth(this.root);
+    }
+
     public Node lca(int n1, int n2) {
         Node N1 = search(n1);
         Node N2 = search(n2);
@@ -164,6 +168,16 @@ public class BinarySearchTree{
         return node;
     }
 
+    int maxDepth(Node node) {
+        if(node == null){
+            return 0;
+        }
+
+        int ldepth = maxDepth(node.left);
+        int rdepth = maxDepth(node.right);
+
+        return Math.max(ldepth, rdepth) + 1;
+    }
 
 }
 
@@ -173,15 +187,10 @@ class Tree {
         //     8       22
         // 4       12
         //     10      14
-        int[] ar = {20, 8, 22, 4, 12, 10, 14};
+        int[] ar = {20, 8, 22, 4, 12, 10, 14, 1, 2};
         BinarySearchTree tree = new BinarySearchTree(ar);
 
-        try {
-            Node t = tree.lca(14, 4);
-            System.out.println(t.key);
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-        tree.inOrder();
+        System.out.println(tree.depth());
+
     }
 }
