@@ -1,6 +1,6 @@
 import java.util.*;
 
-class equilibrium_element_in_array{
+public class equilibrium_element_in_array{
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 3, 3};
         int[] pre = new int[arr.length];

@@ -1,6 +1,6 @@
 import java.util.*;
 
-class second_max_number{
+public class second_max_number{
     public static void main(String[] args) {
         int[] arr = {12, 5, 7, 10, 90};
 

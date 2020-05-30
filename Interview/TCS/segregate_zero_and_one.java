@@ -1,6 +1,6 @@
 import java.util.*;
 
-class segregate_zero_and_one{
+public class segregate_zero_and_one{
     public static void main(String[] args) {
         int[] arr = {0, 1, 0, 1, 0};
 
