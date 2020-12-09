@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-//Changes for testing branches(git)
+//Changes for testing branches - 2(git)
 public class CHEFSTR1_chef_and_string{
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
