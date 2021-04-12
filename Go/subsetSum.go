@@ -44,7 +44,7 @@ func memoizationSubsetSum(arr []int, sum int, n int) int {
 	return T_int[n][sum]
 }
 
-func topdownSubsetSum(arr []int, sum int, n int) bool {
+func bottomupSubsetSum(arr []int, sum int, n int) bool {
 	for i := 0; i <= n; i++ {
 		T_bool[i][0] = true
 	}
@@ -74,5 +74,5 @@ func subsetSum() {
 
 	fmt.Println(recursiveSubsetSum(arr, sum, n))
 	fmt.Println(memoizationSubsetSum(arr, sum, n))
-	fmt.Println(topdownSubsetSum(arr, sum, n))
+	fmt.Println(bottomupSubsetSum(arr, sum, n))
 }

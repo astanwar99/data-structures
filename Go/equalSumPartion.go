@@ -41,7 +41,7 @@ func memoizationEqualSumPart(arr []int, sum int, n int) int {
 	return T_int[n][sum]
 }
 
-func topdownEqualSumPart(arr []int, sum int, n int) bool {
+func bottomupEqualSumPart(arr []int, sum int, n int) bool {
 
 	for i := 0; i <= n; i++ {
 		T_bool[i][0] = true
@@ -84,5 +84,5 @@ func equalSumPart() {
 	}
 	fmt.Println(recursiveEqualSumPart(arr, sum/2, n))
 	fmt.Println(memoizationEqualSumPart(arr, sum/2, n))
-	fmt.Println(topdownEqualSumPart(arr, sum/2, n))
+	fmt.Println(bottomupEqualSumPart(arr, sum/2, n))
 }

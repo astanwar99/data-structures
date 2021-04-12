@@ -38,7 +38,7 @@ func knapsackMemoization(val []int, wt []int, W int, n int) int {
 
 }
 
-func knapsackTopdown(val []int, wt []int, W int, n int) int {
+func knapsackBottomup(val []int, wt []int, W int, n int) int {
 	for i := 0; i <= W; i++ {
 		T_int[n][i] = 0
 	}
@@ -74,6 +74,6 @@ func knapsack01() {
 	fmt.Println("Execution Time: ", time.Since(start))
 	fmt.Println(knapsackMemoization(val, wt, W, n))
 	fmt.Println("Execution Time: ", time.Since(start))
-	fmt.Println(knapsackTopdown(val, wt, W, n))
+	fmt.Println(knapsackBottomup(val, wt, W, n))
 	fmt.Println("Execution Time: ", time.Since(start))
 }
