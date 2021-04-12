@@ -21,6 +21,9 @@ func main() {
 
 	fmt.Println("Equal Sum Partition: ")
 	equalSumPart()
+
+	fmt.Println("Count subset sum: ")
+	countSubsetSum()
 	// for i := 0; i <= n; i++ {
 	// 	for j := 0; j <= sum; j++ {
 	// 		fmt.Print(T_bool[i][j], " ")
