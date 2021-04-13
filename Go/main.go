@@ -24,6 +24,9 @@ func main() {
 
 	fmt.Println("Count subset sum: ")
 	countSubsetSum()
+
+	fmt.Println("Minimum subset sum difference: ")
+	minSubsetSumDiff()
 	// for i := 0; i <= n; i++ {
 	// 	for j := 0; j <= sum; j++ {
 	// 		fmt.Print(T_bool[i][j], " ")
