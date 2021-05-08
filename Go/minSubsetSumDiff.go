@@ -31,7 +31,7 @@ func boottomupMinSubsetDiff(arr []int, tsum int, n int) int {
 }
 
 func minSubsetSumDiff() {
-	var arr = []int{1, 4, 10}
+	var arr = []int{1, 7, 10}
 	var sum int
 
 	for _, a := range arr {
@@ -39,5 +39,8 @@ func minSubsetSumDiff() {
 	}
 
 	var n int = len(arr)
+	fmt.Println("=================================================")
+	fmt.Println("Divide array in two partitions to get minimum difference")
+	fmt.Println("=================================================")
 	fmt.Println(boottomupMinSubsetDiff(arr, sum, n))
 }

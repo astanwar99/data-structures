@@ -71,7 +71,9 @@ func subsetSum() {
 			T_int[i][j] = -1
 		}
 	}
-
+	fmt.Println("=================================================")
+	fmt.Println("Find subset with given sum")
+	fmt.Println("=================================================")
 	fmt.Println(recursiveSubsetSum(arr, sum, n))
 	fmt.Println(memoizationSubsetSum(arr, sum, n))
 	fmt.Println(bottomupSubsetSum(arr, sum, n))

@@ -78,6 +78,9 @@ func equalSumPart() {
 			T_int[i][j] = -1
 		}
 	}
+	fmt.Println("=================================================")
+	fmt.Println("Find if array can be divide in two equal partitions")
+	fmt.Println("=================================================")
 	if sum%2 == 1 {
 		fmt.Println(false)
 		return

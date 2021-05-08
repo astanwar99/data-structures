@@ -70,6 +70,9 @@ func knapsack01() {
 		}
 	}
 	start := time.Now()
+	fmt.Println("=================================================")
+	fmt.Println("Maximize value for given weight")
+	fmt.Println("=================================================")
 	fmt.Println(recursiveKnapsack(val, wt, W, n))
 	fmt.Println("Execution Time: ", time.Since(start))
 	fmt.Println(knapsackMemoization(val, wt, W, n))

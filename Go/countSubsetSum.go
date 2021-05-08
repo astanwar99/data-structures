@@ -63,8 +63,9 @@ func bottomupCountSubsetSum(arr []int, sum int, n int) int {
 }
 
 func countSubsetSum() {
-	var arr = []int{2, 3, 5, 8, 4, 10}
-	var sum int = 8
+	// var arr = []int{2, 3, 5, 8, 4, 10}
+	var arr = []int{1, 1, 2, 3}
+	var sum int = 4
 	var n int = len(arr)
 
 	for i := 0; i <= n; i++ {
@@ -72,7 +73,9 @@ func countSubsetSum() {
 			T_int[i][j] = -1
 		}
 	}
-
+	fmt.Println("=================================================")
+	fmt.Println("Find number of susbset with given sum")
+	fmt.Println("=================================================")
 	fmt.Println(recursiveCountSubsetSum(arr, sum, n))
 	fmt.Println(memoizationCountSubsetSum(arr, sum, n))
 	fmt.Println(bottomupCountSubsetSum(arr, sum, n))
