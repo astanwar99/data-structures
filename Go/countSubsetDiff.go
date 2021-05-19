@@ -16,7 +16,7 @@ func bottomupCountSubsetDiff(arr []int, n int, val int) int {
 			if arr[i-1] <= j {
 				T_int[i][j] = T_int[i-1][j] + T_int[i-1][j-arr[i-1]]
 			} else {
-				T_int[j][j] = T_int[i-1][j]
+				T_int[i][j] = T_int[i-1][j]
 			}
 		}
 	}

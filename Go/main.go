@@ -29,6 +29,12 @@ func main() {
 	minSubsetSumDiff()
 
 	countSubsetDiff()
+
+	targetSum()
+
+	unbounded_knapsack()
+
+	coin_change()
 	// for i := 0; i <= n; i++ {
 	// 	for j := 0; j <= sum; j++ {
 	// 		fmt.Print(T_bool[i][j], " ")
